@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrick Mwanga - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="background-elements">
+        <div class="blob pink-blob"></div>
+        <div class="blob blue-blob"></div>
+        <svg class="wireframe wire-top" viewBox="0 0 200 200">
+            <path d="M -50 150 Q 50 -50 200 100" fill="none" class="wire-stroke"></path>
+            <circle cx="10" cy="100" r="100" fill="none" class="wire-stroke"></circle>
+        </svg>
+    </div>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="logo">
+            <div class="logo-mark">P</div>
+            <span class="logo-text">patrick<strong>mwanga</strong></span>
+        </div>
+        <nav class="nav-links">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact Me</a>
+        </nav>
+        <a href="#contact" class="btn btn-dark">Download CV <i class="fa-solid fa-download"></i></a>
+        <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="social-sidebar">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+            </div>
+
+            <div class="hero-content">
+                <div class="hero-image-wrapper">
+                    <!-- The circular backdrop -->
+                    <div class="image-backdrop"></div>
+
+                    <!-- SVG Wavy wrapper line -->
+                    <!-- <svg class="wavy-line" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+                        <path id="curve" fill="none" stroke="#10b981" stroke-width="3" d="M120,380 C 80,250 150,150 250,120 C 350,90 420,180 380,300 C 350,400 250,450 120,380" />
+                    </svg> -->
+
+                    <!-- Portrait Profile Image -->
+                    <img src="assets/profile.png" alt="Patrick Mwanga" class="profile-img"
+                        onerror="this.src='https://ui-avatars.com/api/?name=Patrick+Mwanga&size=400&background=cdd5d4&color=18181b'">
+
+                    <!-- Come on let's talk badge -->
+                    <div class="lets-talk-badge" id="talkBadge">
+                        <svg viewBox="0 0 100 100" class="badge-svg">
+                            <path id="text-path" fill="none"
+                                d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" />
+                            <text class="badge-text">
+                                <textPath href="#text-path" startOffset="0%" fill="#18181b">COME ON LET'S TALK •
+                                </textPath>
+                            </text>
+                            <circle cx="50" cy="50" r="10" fill="#fff" stroke="#10b981" stroke-width="2" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="hero-text">
+                    <h1 class="hero-title">Patrick Mwanga</h1>
+                    <p class="hero-subtitle">SYSTEM DESIGNER // LEAD DEVELOPER // CTO</p>
+                </div>
+            </div>
+
+            <div class="client-logos">
+                <div class="logo-item"><i class="fa-solid fa-building"></i> Egov Tech</div>
+                <div class="logo-item"><i class="fa-solid fa-building-columns"></i> Capital One</div>
+                <div class="logo-item"><i class="fa-solid fa-truck-fast"></i> P4SE</div>
+                <div class="logo-item"><i class="fa-solid fa-mobile-screen-button"></i> Wintech</div>
+                <div class="logo-item"><i class="fa-solid fa-newspaper"></i> Jambo Concept</div>
+            </div>
+        </section>
+
+        <!-- About / Education -->
+        <section class="section about-section" id="about">
+            <div class="container reveal">
+                <div class="section-header">
+                    <h2>About Me</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="about-grid">
+                    <div class="about-card glass">
+                        <div class="card-icon"><i class="fa-solid fa-user-tie"></i></div>
+                        <h3>Bio</h3>
+                        <p>I am a seasoned System Designer, Lead Developer, and CTO based in Masasi, Tanzania. With
+                            extensive experience in architecting complex technological solutions, I lead robust
+                            engineering teams and build high-scale integrations.</p>
+                        <div class="contact-info mt-3">
+                            <p><i class="fa-regular fa-envelope"></i> patrickmwanga@gmail.com</p>
+                            <p><i class="fa-solid fa-phone"></i> +255 (0) 718 313632</p>
+                            <p><i class="fa-solid fa-location-dot"></i> Masasi, Tanzania</p>
+                        </div>
+                    </div>
+                    <div class="about-card highlight-card">
+                        <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <h3>Education</h3>
+                        <p class="degree">BSc in Computer Science with Mathematics</p>
+                        <p>Bachelor of Science in Computer Science with a strong mathematical foundation, equipping me
+                            with deep problem-solving skills and algorithmic thinking.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Experience -->
+        <section class="section experience-section alt-bg" id="experience">
+            <div class="container reveal">
+                <div class="section-header">
+                    <h2>Work History</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="timeline">
+                    <!-- Timeline items based on CV -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass">
+                            <h3>Director and Shareholder</h3>
+                            <p class="company text-gradient">Vunoo Group Company limited / Egov Technologies</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass">
+                            <h3>Chief Technology Officer (Part Time)</h3>
+                            <p class="company text-gradient">Egov Technologies Company limited</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass">
+                            <h3>Chief Technology Officer (Part Time)</h3>
+                            <p class="company text-gradient">P4SE Company limited</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass">
+                            <h3>Leading Programmer (Part Time)</h3>
+                            <p class="company text-gradient">Capital One Tanzania Limited</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section projects-section" id="projects">
+            <div class="container reveal">
+                <div class="section-header">
+                    <h2>Featured Projects</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card glass hover-lift">
+                        <div class="project-content">
+                            <span class="project-role">System design & Lead Developer</span>
+                            <h3>GIS Tax Collection System</h3>
+                            <p>Property, land and house rents tax collection system developed for egov Technologies.</p>
+                        </div>
+                    </div>
+                    <div class="project-card glass hover-lift">
+                        <div class="project-content">
+                            <span class="project-role">System design & Lead Developer</span>
+                            <h3>Egov maps platform</h3>
+                            <p>Development of Egov maps platform, involving complex GIS architectures.</p>
+                        </div>
+                    </div>
+                    <div class="project-card glass hover-lift">
+                        <div class="project-content">
+                            <span class="project-role">Platform admin, Design & Lead Dev</span>
+                            <h3>Mobile Money API</h3>
+                            <p>Integration with Gamaster sales platform for Wintech Tanzania limited.</p>
+                        </div>
+                    </div>
+                    <div class="project-card glass hover-lift">
+                        <div class="project-content">
+                            <span class="project-role">System design & Lead Developer</span>
+                            <h3>Breaking News SMS App</h3>
+                            <p>Integration with Vodacom and Tigo for Jambo Concept and Uhuru.</p>
+                        </div>
+                    </div>
+                    <div class="project-card glass hover-lift">
+                        <div class="project-content">
+                            <span class="project-role">System designer & Lead Developer</span>
+                            <h3>Mobile Banking USSD App</h3>
+                            <p>Mobile money integration, core banking integration & Maxcom utility integration for
+                                Capital one Tanzania.</p>
+                        </div>
+                    </div>
+                    <div class="project-card glass hover-lift">
+                        <div class="project-content">
+                            <span class="project-role">System design & Lead Developer</span>
+                            <h3>Courier Management</h3>
+                            <p>System architecture and implementation of logistics tracking for P4SE.</p>
+                        </div>
+                    </div>
+                    <div class="project-card glass hover-lift">
+                        <div class="project-content">
+                            <span class="project-role">System design & Lead Developer</span>
+                            <h3>B2B High Value Payment</h3>
+                            <p>Integration with CRDB and Dangote Cement for seamless financial transactions.</p>
+                        </div>
+                    </div>
+                    <div class="project-card glass hover-lift">
+                        <div class="project-content">
+                            <span class="project-role">System design & Programmer</span>
+                            <h3>Fleet Management System</h3>
+                            <p>Developed comprehensive fleet tracking capabilities for P4SE.</p>
+                        </div>
+                    </div>
+                    <div class="project-card highlight-project hover-lift">
+                        <div class="project-content">
+                            <span class="project-role">Programmer</span>
+                            <h3>EMIS (COSTECH & WORLD BANK)</h3>
+                            <p>Consultancy services for implementation of an education management information system for
+                                8 HERIs and national agencies in Tanzania.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Contact -->
+        <section class="section contact-section" id="contact">
+            <div class="container reveal">
+                <div class="contact-box glass">
+                    <h2>Let's build something amazing together</h2>
+                    <p>I'm always open to discussing system architectures, integrations, or your next big idea.</p>
+                    <a href="mailto:patrickmwanga@gmail.com" class="btn btn-primary mt-3">Email Me at
+                        patrickmwanga@gmail.com <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center">
+            <div class="container">
+                <p>&copy; 2026 Patrick Peter Mwanga. All rights reserved.</p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
