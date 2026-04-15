@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrick Mwanga - CV</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --black: #000000;
+            --white: #ffffff;
+            --gray-100: #f7f7f7;
+            --gray-200: #e5e5e5;
+            --gray-400: #a3a3a3;
+            --gray-600: #525252;
+            --gray-800: #262626;
+            --accent: #10b981;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 11pt;
+            line-height: 1.5;
+            color: var(--black);
+            background: var(--white);
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        @page {
+            size: A4;
+            margin: 15mm 15mm 20mm 15mm;
+        }
+        
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 15mm;
+            margin: 0 auto;
+            background: var(--white);
+        }
+        
+        @media print {
+            body { background: var(--white); }
+            .page { 
+                padding: 0;
+                margin: 0;
+                width: 100%;
+                min-height: auto;
+                page-break-after: always;
+            }
+            .page:last-child { page-break-after: auto; }
+            .no-print { display: none !important; }
+        }
+        
+        @media screen {
+            .page {
+                box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.08);
+                margin: 20px auto;
+            }
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-bottom: 16px;
+            border-bottom: 2px solid var(--black);
+            margin-bottom: 20px;
+        }
+        
+        .header-left h1 {
+            font-size: 28pt;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            line-height: 1.1;
+            margin-bottom: 4px;
+        }
+        
+        .header-left p {
+            font-size: 10pt;
+            font-weight: 400;
+            color: var(--gray-600);
+            letter-spacing: 0.02em;
+        }
+        
+        .header-right {
+            text-align: right;
+            font-size: 9pt;
+            line-height: 1.6;
+        }
+        
+        .header-right a {
+            color: var(--black);
+            text-decoration: none;
+        }
+        
+        .header-right a:hover {
+            text-decoration: underline;
+        }
+        
+        .section {
+            margin-bottom: 18px;
+        }
+        
+        .section-title {
+            font-size: 8pt;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--gray-600);
+            padding-bottom: 6px;
+            border-bottom: 1px solid var(--gray-200);
+            margin-bottom: 10px;
+        }
+        
+        .summary-text {
+            font-size: 10pt;
+            font-weight: 400;
+            line-height: 1.6;
+            color: var(--gray-800);
+        }
+        
+        .experience-item {
+            margin-bottom: 14px;
+        }
+        
+        .experience-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 3px;
+        }
+        
+        .experience-title {
+            font-size: 10pt;
+            font-weight: 600;
+        }
+        
+        .experience-company {
+            font-size: 10pt;
+            font-weight: 400;
+            color: var(--gray-600);
+        }
+        
+        .experience-date {
+            font-size: 9pt;
+            font-weight: 400;
+            color: var(--gray-400);
+        }
+        
+        .experience-description {
+            font-size: 9pt;
+            font-weight: 300;
+            color: var(--gray-600);
+            line-height: 1.5;
+            margin-top: 4px;
+        }
+        
+        .two-column {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .two-column .left {
+            flex: 1.2;
+        }
+        
+        .two-column .right {
+            flex: 1;
+        }
+        
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        
+        .skill-tag {
+            font-size: 8pt;
+            font-weight: 500;
+            padding: 4px 10px;
+            background: var(--gray-100);
+            border-radius: 4px;
+            border: 1px solid var(--gray-200);
+        }
+        
+        .project-item {
+            margin-bottom: 12px;
+        }
+        
+        .project-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .project-title {
+            font-size: 10pt;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+        
+        .project-role {
+            font-size: 8pt;
+            font-weight: 500;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .project-description {
+            font-size: 9pt;
+            font-weight: 300;
+            color: var(--gray-600);
+            line-height: 1.5;
+            margin-top: 3px;
+        }
+        
+        .education-item {
+            margin-bottom: 10px;
+        }
+        
+        .education-degree {
+            font-size: 10pt;
+            font-weight: 600;
+        }
+        
+        .education-school {
+            font-size: 9pt;
+            font-weight: 400;
+            color: var(--gray-600);
+        }
+        
+        .education-year {
+            font-size: 9pt;
+            font-weight: 400;
+            color: var(--gray-400);
+        }
+        
+        .contact-inline {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-item {
+            font-size: 9pt;
+            color: var(--gray-600);
+        }
+        
+        .contact-item strong {
+            color: var(--black);
+            font-weight: 500;
+        }
+        
+        .divider {
+            height: 1px;
+            background: var(--gray-200);
+            margin: 16px 0;
+        }
+        
+        .page-number {
+            font-size: 8pt;
+            color: var(--gray-400);
+            text-align: center;
+            padding-top: 10mm;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header class="header">
+            <div class="header-left">
+                <h1>Patrick Mwanga</h1>
+                <p>System Designer | Lead Developer | CTO</p>
+            </div>
+            <div class="header-right">
+                <div>patrickmwanga@gmail.com</div>
+                <div>+255 (0) 718 313632</div>
+                <div>Masasi, Tanzania</div>
+            </div>
+        </header>
+        
+        <section class="section">
+            <h2 class="section-title">Profile</h2>
+            <p class="summary-text">
+                Seasoned System Designer, Lead Developer, and CTO based in Masasi, Tanzania. Extensive experience in architecting complex technological solutions, leading robust engineering teams, and building high-scale integrations. Expert in OpenClaw automation systems, GIS architectures, and mobile banking integrations. Proven track record delivering enterprise solutions for government, financial, and logistics sectors.
+            </p>
+        </section>
+        
+        <div class="two-column">
+            <div class="left">
+                <section class="section">
+                    <h2 class="section-title">Experience</h2>
+                    
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div>
+                                <div class="experience-title">Director and Shareholder</div>
+                                <div class="experience-company">Vunoo Group Company Ltd / Egov Technologies</div>
+                            </div>
+                        </div>
+                        <p class="experience-description">
+                            Strategic leadership and governance for technology ventures. Oversight of system architecture decisions and business development.
+                        </p>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div>
+                                <div class="experience-title">Chief Technology Officer (Part-Time)</div>
+                                <div class="experience-company">Egov Technologies Company Ltd</div>
+                            </div>
+                        </div>
+                        <p class="experience-description">
+                            Leading technology strategy and development of GIS-based tax collection and mapping platforms for government clients.
+                        </p>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div>
+                                <div class="experience-title">Chief Technology Officer (Part-Time)</div>
+                                <div class="experience-company">P4SE Company Ltd</div>
+                            </div>
+                        </div>
+                        <p class="experience-description">
+                            Architecting courier management and fleet tracking systems. Built B2B high-value payment integrations with banking partners.
+                        </p>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div>
+                                <div class="experience-title">Leading Programmer (Part-Time)</div>
+                                <div class="experience-company">Capital One Tanzania Ltd</div>
+                            </div>
+                        </div>
+                        <p class="experience-description">
+                            Developed mobile banking USSD applications with core banking and mobile money integrations.
+                        </p>
+                    </div>
+                </section>
+            </div>
+            
+            <div class="right">
+                <section class="section">
+                    <h2 class="section-title">Skills</h2>
+                    <div class="skills-grid">
+                        <span class="skill-tag">System Architecture</span>
+                        <span class="skill-tag">Odoo ERP</span>
+                        <span class="skill-tag">OpenClaw</span>
+                        <span class="skill-tag">GIS Development</span>
+                        <span class="skill-tag">API Integration</span>
+                        <span class="skill-tag">Mobile Banking</span>
+                        <span class="skill-tag">USSD Applications</span>
+                        <span class="skill-tag">Payment Systems</span>
+                        <span class="skill-tag">Fleet Management</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">Team Leadership</span>
+                    </div>
+                </section>
+                
+                <section class="section">
+                    <h2 class="section-title">Education</h2>
+                    <div class="education-item">
+                        <div class="education-degree">BSc Computer Science with Mathematics</div>
+                        <div class="education-school">University of Dar es Salaam</div>
+                        <div class="education-year">Strong mathematical foundation with emphasis on algorithmic thinking and problem-solving</div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    
+    <div class="page">
+        <section class="section">
+            <h2 class="section-title">Key Projects</h2>
+            
+            <div class="project-item">
+                <div class="project-role">System Design & Lead Developer</div>
+                <div class="project-title">GIS Tax Collection System</div>
+                <p class="project-description">
+                    Comprehensive property, land, and house rent tax collection system developed for Egov Technologies. Integrated GIS mapping for property identification and assessment.
+                </p>
+            </div>
+            
+            <div class="project-item">
+                <div class="project-role">System Design & Lead Developer</div>
+                <div class="project-title">Egov Maps Platform</div>
+                <p class="project-description">
+                    Development of a sophisticated GIS mapping platform with complex architectural requirements for government and enterprise clients.
+                </p>
+            </div>
+            
+            <div class="project-item">
+                <div class="project-role">Platform Admin, Design & Lead Dev</div>
+                <div class="project-title">Mobile Money API Integration</div>
+                <p class="project-description">
+                    Integration with Gamaster sales platform for Wintech Tanzania, enabling seamless mobile money transactions and reporting.
+                </p>
+            </div>
+            
+            <div class="project-item">
+                <div class="project-role">System Design & Lead Developer</div>
+                <div class="project-title">Breaking News SMS Application</div>
+                <p class="project-description">
+                    SMS-based news delivery system with integrations to Vodacom and Tigo networks for Jambo Concept and Uhuru media houses.
+                </p>
+            </div>
+            
+            <div class="project-item">
+                <div class="project-role">System Designer & Lead Developer</div>
+                <div class="project-title">Mobile Banking USSD Application</div>
+                <p class="project-description">
+                    Full-featured USSD banking platform including mobile money integration, core banking connectivity, and Maxcom utility payment integration for Capital One Tanzania.
+                </p>
+            </div>
+            
+            <div class="project-item">
+                <div class="project-role">System Design & Lead Developer</div>
+                <div class="project-title">Courier Management System</div>
+                <p class="project-description">
+                    End-to-end logistics tracking platform for P4SE, featuring real-time package tracking, driver management, and delivery confirmation.
+                </p>
+            </div>
+            
+            <div class="project-item">
+                <div class="project-role">System Design & Lead Developer</div>
+                <div class="project-title">B2B High Value Payment System</div>
+                <p class="project-description">
+                    Enterprise payment gateway integrating CRDB Bank with Dangote Cement for seamless high-value B2B financial transactions.
+                </p>
+            </div>
+            
+            <div class="project-item">
+                <div class="project-role">System Design & Lead Developer</div>
+                <div class="project-title">Fleet Management System</div>
+                <p class="project-description">
+                    Comprehensive fleet tracking solution for P4SE with GPS integration, maintenance scheduling, and fuel consumption analytics.
+                </p>
+            </div>
+            
+            <div class="project-item">
+                <div class="project-role">Programmer</div>
+                <div class="project-title">EMIS - Education Management Information System</div>
+                <p class="project-description">
+                    Consultancy services for COSTECH and World Bank implementation of an education management information system serving 8 HERIs and national agencies across Tanzania.
+                </p>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2 class="section-title">OpenClaw Expertise</h2>
+            <p class="summary-text">
+                Implemented and managed OpenClaw automation systems for both internal operations and client workflows. Deployed reliable environments on VPS and virtualized Mac Mini setups. Integrated third-party services via secure APIs with proper handling of API keys and OAuth tokens. Improved system reliability through skill auditing and optimization, reducing risk via tighter permissions and curated approved skills lists.
+            </p>
+        </section>
+        
+        <section class="section">
+            <h2 class="section-title">Clients & Partners</h2>
+            <div class="skills-grid">
+                <span class="skill-tag">Egov Tech</span>
+                <span class="skill-tag">Capital One Tanzania</span>
+                <span class="skill-tag">P4SE</span>
+                <span class="skill-tag">Wintech</span>
+                <span class="skill-tag">Jambo Concept</span>
+                <span class="skill-tag">COSTECH</span>
+                <span class="skill-tag">World Bank</span>
+                <span class="skill-tag">CRDB Bank</span>
+                <span class="skill-tag">Dangote Cement</span>
+                <span class="skill-tag">Vodacom</span>
+                <span class="skill-tag">Tigo</span>
+            </div>
+        </section>
+        
+        <div class="divider"></div>
+        
+        <footer style="text-align: center; font-size: 8pt; color: var(--gray-400);">
+            <p>References available upon request</p>
+        </footer>
+    </div>
+</body>
+</html>
